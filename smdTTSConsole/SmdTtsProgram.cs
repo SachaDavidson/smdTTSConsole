@@ -1,6 +1,5 @@
 ﻿using Microsoft.CognitiveServices.Speech;
 using Microsoft.Extensions.Configuration;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace smdTTSConsole
 {
