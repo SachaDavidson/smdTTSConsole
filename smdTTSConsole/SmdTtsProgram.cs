@@ -50,7 +50,7 @@ namespace smdTTSConsole
             // If this variable has a value of y then the app will run again
             string choice = "y";
 
-            while (choice == "y")
+            while (choice is "y" or "Y")
             {
 
                 // Get user input and synthesize to default speaker
@@ -61,7 +61,7 @@ namespace smdTTSConsole
                     Console.Write("> ");
 
                     // Store the user input
-                    string input = Console.ReadLine() ?? "Input was not entered correctly. Try again later.";
+                    string? input = Console.ReadLine()?.Length > 0 ? Console.ReadLine() : "Input was not entered correctly. Please try again.";
 
                     // Synthesize the speech and store the result
                     var speechSynthesisResult = await speechSynthesizer.SpeakTextAsync(input);
